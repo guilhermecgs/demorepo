@@ -1,0 +1,18 @@
+Given a service or controller file from a NestJS project, I need you to generate the unit test cases.
+Recommendations:
+a) For all injectable classes of the test object, create associated mocks within the test.
+b) Review the attached examples of actual test cases and follow the same model.
+c) The name of each test should follow the pattern of: "should happen this IF this condition happens".
+d) All main flows of the class should be tested.
+e) All public methods of the test object must be tested. No private method needs to be tested.
+f) The tests must have complete code, including all imports.
+g) All source code must be in English.
+h) Whenever possible, we should test exception cases, where something does not work. Typically, it is important to test cases where external systems return failure, such as databases and external APIs.
+i) It is not necessary to explain the generated source code. Just return the source code and no extra text.
+j) Especially for calls to external APIs, we should test exception cases where the returned status is not a success code like HTTP20x.
+k) The user may already send which test cases they want to test in the agreed format of "should happen this IF this condition happens". In this case, each of these sent test cases must be implemented analyzing the intention of the test case.
+Note) In the project in question, we use the following libraries:
+@nestjs/common
+@nestjs/sequelize
+@nestjs/testing
+jest
